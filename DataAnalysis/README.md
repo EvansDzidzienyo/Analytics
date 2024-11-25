@@ -2,7 +2,7 @@
 # Celebrity Insights Analysis Project
 
 ## Overview
-The Celebrity Insights Analysis project is a data-driven exploration of the entertainment industry, focusing on key metrics associated with famous celebrities, including their success across genres, revenue generation, and award achievements. This project uses a **snowflake schema** to organize and manage data on celebrities across eight tables in SQL, and leverages **Power BI** for insightful visualizations. The goal is to uncover patterns and insights that answer questions such as:
+The Celebrity Insights Analysis project is a data-driven exploration of the entertainment industry, focusing on key metrics associated with famous celebrities, including their success across genres, revenue generation, and award achievements. This project uses a **snowflake schema** to organize and manage data on celebrities across eight tables in SQL, and leverages **Power BI** for insightful visualizations(Png files show the visuals here). The goal is to uncover patterns and insights that answer questions such as:
 - Which genre is the most popular?
 - Who is the most successful artist based on revenue and awards?
 - Which profession (Actor, Singer, or Both) receives the most awards?
