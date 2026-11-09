@@ -27,7 +27,7 @@ The project is intended to demonstrate a workflow that moves from relational dat
 
 ## Database structure
 
-The current `Tables.sql` script creates **seven tables**:
+The current `Tables.sql` script creates **eight tables**:
 
 1. `Celebrities`
 2. `Regions`
@@ -38,7 +38,7 @@ The current `Tables.sql` script creates **seven tables**:
 7. `Revenue`
 8. `Awards`
 
-Correction: the list above contains **eight named entities** when Awards is counted; the SQL file therefore creates **eight tables**, not seven. The schema uses foreign keys to connect celebrity records to region, success, movie, song and award records.
+The schema uses foreign keys to connect celebrity records to region, success, movie, song and award records.
 
 ### Schema caveats
 
