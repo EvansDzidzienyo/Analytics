@@ -27,11 +27,11 @@ jobs:
           --health-retries=10
     steps:
       - uses: actions/checkout@v4
-      - name: Install MySQL client
-        run: sudo apt-get update && sudo apt-get install -y mysql-client
-      - name: Create schema
-        run: mysql -h 127.0.0.1 -uroot -proot portfolio < DataAnalysis/Tables.sql
-      - name: Load sample records
-        run: mysql -h 127.0.0.1 -uroot -proot portfolio < DataAnalysis/Insertions.sql
-      - name: Execute analytical queries
-        run: mysql -h 127.0.0.1 -uroot -proot portfolio < DataAnalysis/Queries.sql
+      - name: Run schema, sample inserts and analytical queries
+        shell: bash
+        run: |
+          container_id="$(docker ps -q --filter ancestor=mysql:8.0 | head -n 1)"
+          test -n "$container_id"
+          docker exec -i "$container_id" mysql -uroot -proot portfolio < DataAnalysis/Tables.sql
+          docker exec -i "$container_id" mysql -uroot -proot portfolio < DataAnalysis/Insertions.sql
+          docker exec -i "$container_id" mysql -uroot -proot portfolio < DataAnalysis/Queries.sql
