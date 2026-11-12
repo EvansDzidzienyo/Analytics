@@ -21,7 +21,7 @@ CREATE TABLE Celeb_Regions (
     Region_Name VARCHAR(255) NOT NULL,
     Region_ID INT,
     FOREIGN KEY (Person_ID) REFERENCES Celebrities(Person_ID),
-	FOREIGN KEY (Region_ID) REFERENCES regions(Region_ID)
+	FOREIGN KEY (Region_ID) REFERENCES Regions(Region_ID)
 );
 
 
